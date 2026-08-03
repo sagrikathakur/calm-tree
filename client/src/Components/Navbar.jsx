@@ -27,7 +27,7 @@ const Navbar = () => {
           </span>
         </div>
 
-        {/* Desktop Navigation Links */}
+        {/* Navigation Links */}
         <ul className='hidden md:flex items-center gap-2 lg:gap-4 text-xs lg:text-sm font-semibold tracking-wide text-emerald-900/80 uppercase'>
           <NavLink to='/about'>
             {({ isActive }) => (
@@ -81,7 +81,7 @@ const Navbar = () => {
             <div className='hidden md:flex items-center gap-1.5 cursor-pointer group relative py-1'>
               <img
                 className='w-7 sm:w-8 h-7 sm:h-8 rounded-full object-cover border border-gray-200'
-                src={assets.profile_icon || assets.logo}
+                src={assets.profile_icon}
                 alt="Profile"
               />
               <img className='w-2 sm:w-2.5 opacity-70 group-hover:opacity-100 transition-opacity' src={assets.dropdown_icon} alt="Dropdown" />
@@ -115,15 +115,13 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Drawer Menu */}
-      <div 
-        className={`fixed inset-0 z-50 md:hidden bg-slate-950/40 backdrop-blur-xs transition-opacity duration-300 ${
-          showMenu ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        <div 
-          className={`fixed right-0 top-0 bottom-0 w-4/5 max-w-xs bg-amber-50/95 backdrop-blur-md p-6 shadow-2xl flex flex-col justify-between transition-transform duration-300 ease-out ${
-            showMenu ? 'translate-x-0' : 'translate-x-full'
+      <div
+        className={`fixed inset-0 z-50 md:hidden bg-slate-950/40 backdrop-blur-xs transition-opacity duration-300 ${showMenu ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
+      >
+        <div
+          className={`fixed right-0 top-0 bottom-0 w-4/5 max-w-xs bg-amber-50/95 backdrop-blur-md p-6 shadow-2xl flex flex-col justify-between transition-transform duration-300 ease-out ${showMenu ? 'translate-x-0' : 'translate-x-full'
+            }`}
         >
           <div>
             <div className='flex items-center justify-between pb-4 border-b border-emerald-200/50'>
@@ -141,37 +139,37 @@ const Navbar = () => {
             </div>
 
             <ul className='flex flex-col gap-2 mt-6 text-sm font-semibold uppercase text-emerald-900'>
-              <NavLink 
-                onClick={() => setShowMenu(false)} 
-                to='/about' 
+              <NavLink
+                onClick={() => setShowMenu(false)}
+                to='/about'
                 className={({ isActive }) => `px-4 py-3 rounded-xl transition-all ${isActive ? 'text-emerald-950 font-bold' : 'text-emerald-900 hover:text-emerald-700'}`}
               >
                 ABOUT US
               </NavLink>
-              <NavLink 
-                onClick={() => setShowMenu(false)} 
-                to='/services' 
+              <NavLink
+                onClick={() => setShowMenu(false)}
+                to='/services'
                 className={({ isActive }) => `px-4 py-3 rounded-xl transition-all ${isActive ? 'text-emerald-950 font-bold' : 'text-emerald-900 hover:text-emerald-700'}`}
               >
                 SERVICES WE PROVIDE
               </NavLink>
-              <NavLink 
-                onClick={() => setShowMenu(false)} 
-                to='/why-us' 
+              <NavLink
+                onClick={() => setShowMenu(false)}
+                to='/why-us'
                 className={({ isActive }) => `px-4 py-3 rounded-xl transition-all ${isActive ? 'text-emerald-950 font-bold' : 'text-emerald-900 hover:text-emerald-700'}`}
               >
                 WHY US
               </NavLink>
-              <NavLink 
-                onClick={() => setShowMenu(false)} 
-                to='/journal' 
+              <NavLink
+                onClick={() => setShowMenu(false)}
+                to='/journal'
                 className={({ isActive }) => `px-4 py-3 rounded-xl transition-all ${isActive ? 'text-emerald-950 font-bold' : 'text-emerald-900 hover:text-emerald-700'}`}
               >
                 JOURNAL IT
               </NavLink>
-              <NavLink 
-                onClick={() => setShowMenu(false)} 
-                to='/contact' 
+              <NavLink
+                onClick={() => setShowMenu(false)}
+                to='/contact'
                 className={({ isActive }) => `px-4 py-3 rounded-xl transition-all ${isActive ? 'text-emerald-950 font-bold' : 'text-emerald-900 hover:text-emerald-700'}`}
               >
                 CONTACT
@@ -182,14 +180,14 @@ const Navbar = () => {
           <div className='pt-4 border-t border-emerald-200/50'>
             {token ? (
               <div className='flex flex-col gap-2 text-sm font-semibold text-emerald-900'>
-                <p 
-                  onClick={() => { setShowMenu(false); navigate('/my-profile'); }} 
+                <p
+                  onClick={() => { setShowMenu(false); navigate('/my-profile'); }}
                   className='px-4 py-2.5 rounded-xl cursor-pointer hover:text-emerald-700'
                 >
                   My Profile
                 </p>
-                <p 
-                  onClick={() => { setShowMenu(false); navigate('/my-appointments'); }} 
+                <p
+                  onClick={() => { setShowMenu(false); navigate('/my-appointments'); }}
                   className='px-4 py-2.5 rounded-xl cursor-pointer hover:text-emerald-700'
                 >
                   My Appointments
