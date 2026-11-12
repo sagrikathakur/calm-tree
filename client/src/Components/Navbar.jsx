@@ -22,6 +22,8 @@ const Navbar = () => {
               className='h-7 sm:h-10 lg:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105'
             />
           </div>
+
+
           <span className='font-semibold sm:text-xl lg:text-2xl tracking-tight text-emerald-700 whitespace-nowrap'>
             Calm Tree
           </span>
